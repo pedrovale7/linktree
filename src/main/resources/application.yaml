@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: linktree
+  config.import: optional:file:.env[.properties]
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/${NAME_DB}
+    username: ${USER_DB}
+    password: ${PASSW_DB}
+
+  jpa:
+    hibernate.ddl-auto: update
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
