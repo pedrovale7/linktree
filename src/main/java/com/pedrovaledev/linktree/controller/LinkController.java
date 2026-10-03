@@ -3,7 +3,6 @@ package com.pedrovaledev.linktree.controller;
 import com.pedrovaledev.linktree.dto.LinkRequestDto;
 import com.pedrovaledev.linktree.dto.LinkResponseDto;
 import com.pedrovaledev.linktree.service.LinkService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
