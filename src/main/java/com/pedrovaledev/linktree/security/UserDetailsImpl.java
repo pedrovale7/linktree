@@ -3,6 +3,7 @@ package com.pedrovaledev.linktree.security;
 import com.pedrovaledev.linktree.model.User;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -18,7 +19,7 @@ public class UserDetailsImpl implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(()-> "read");
+        return user.getAutorization().stream().map(SimpleGrantedAuthority::new).toList();
     }
 
     @Override

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
@@ -24,8 +26,11 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    User(String username, String password) {
+    private List<String> autorization;
+
+    User(String username, String password, List<String> autorization) {
         this.username = username;
         this.password = password;
+        this.autorization = autorization;
     }
 }
