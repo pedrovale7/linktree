@@ -26,11 +26,10 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    private List<String> autorization;
+    private List<String> authorization;
 
-    User(String username, String password, List<String> autorization) {
+    public User(String username, String password) {
         this.username = username;
         this.password = password;
-        this.autorization = autorization;
     }
 }
